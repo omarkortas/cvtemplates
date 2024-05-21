@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume/CV Template</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="" href="image88.png"><!-- ========== icon ========== -->
+
+  </head>
+<header>
+  <a href="acc.html"><button id="back">back</button></a>
+  <br><br><center>
+  <!-- ========== design ========== -->
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>		
+    <div class="👍"></div>
+  </div></center>
+</header>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const customizeBtn = document.getElementById("customizeBtn");
+
+        customizeBtn.addEventListener("click", function() {
+            // Récupérer les valeurs des champs de formulaire
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const degree = document.getElementById("degree").value;
+            const university = document.getElementById("university").value;
+            const eduYear = document.getElementById("eduYear").value;
+            const position = document.getElementById("position").value;
+            const company = document.getElementById("company").value;
+            const workYear = document.getElementById("workYear").value;
+            const skills = document.getElementById("skills").value;
+
+            // Construire le message à afficher dans l'alerte
+            const message = `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Education:
+- Degree: ${degree}
+- University: ${university}
+- Year of Graduation: ${eduYear}
+
+Work Experience:
+- Position: ${position}
+- Company: ${company}
+- Year of Employment: ${workYear}
+
+Skills: ${skills}
+`;
+
+            // Afficher le message dans une alerte
+            alert(message);
+        });
+    });
+</script>
+
+  <div class="container">
+    <div class="header">
+      <h1>My Resume/CV</h1>
+      <button id="customizeBtn">Customize Design</button>
+    </div>
+    <div class="personal-info">
+      <h2>Personal Information</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your Name">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Your Email">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" placeholder="Your Phone">
+    </div>
+    <div class="education">
+      <h2>Education</h2>
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" placeholder="Your Degree">
+      <label for="university">University:</label>
+      <input type="text" id="university" placeholder="Your University">
+      <label for="eduYear">Year of Graduation:</label>
+      <input type="text" id="eduYear" placeholder="Year">
+    </div>
+    <div class="work-experience">
+      <h2>Work Experience</h2>
+      <label for="position">Position:</label>
+      <input type="text" id="position" placeholder="Your Position">
+      <label for="company">Company:</label>
+      <input type="text" id="company" placeholder="Your Company">
+      <label for="workYear">Year of Employment:</label>
+      <input type="text" id="workYear" placeholder="Year">
+    </div>
+    <div class="skills">
+      <h2>Skills</h2>
+      <label for="skills">List your skills:</label>
+      <textarea id="skills" placeholder="Your Skills"></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <button onclick="imprimerPage()">Imprimer cette page</button>
+
+  <!-- Script JavaScript pour l'impression -->
+  <script>
+      function imprimerPage() {
+          window.print(); // Appeler la fonction native d'impression du navigateur
+      }
+  </script>
+</body>
+</html>
